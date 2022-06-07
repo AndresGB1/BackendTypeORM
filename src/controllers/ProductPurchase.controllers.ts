@@ -34,7 +34,7 @@ export const createProductPurchase = async (req: Request, res: Response) => {
     const productPurchase = new ProductPurchase();
     productPurchase.purchaseDate = purchaseDate;
     productPurchase.total = total;
-    productPurchase.user = user;
+    productPurchase.userId = user;
     await productPurchase.save();
     return res.json(productPurchase);
   } catch (error) {
